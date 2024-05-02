@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* 
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+ */
+
+body {
+  margin: 0px 0px 0px 0px;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  margin: 0px 0px 0px 0px;
+}
+p {
+  font-family: "Roboto", sans-serif;
+}
+.navbar {
+  background-color: #6a5c8131;
+  backdrop-filter: blur(30px);
+  margin: 0px 0px 0px 0px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 100;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.navbar li {
+  float: right;
+}
+.navbar li:nth-child(1) {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.navbar li h3 {
+  display: block;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin: 10px 0px 0px 30px;
+  transition: 0.5s font-size ease-in;
+}
+.navbar li h3:hover {
+  font-size: 22px;
+  cursor: pointer;
+}
+.navbar li a:hover {
+  /* background-color: #111; */
+  background-color: #6a5c8170;
+  backdrop-filter: blur(100px);
+}
+
+.ImgSlider {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.Content {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* border: 0.5px solid red; */
+}
+.Content .flexBox {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.Content .flexBox h1 {
+  font-size: 40px;
+}
+.Content .flexBox p {
+  font-size: 20px;
+  font-weight: 300;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  pointer-events: none; /* Allow clicking through the overlay to the image */
+}
+.Image img {
+  width: 100%;
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%); */
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 200px; /* Adjust the minimum height as needed */
+  background: #6a5c81;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.footerMenu,
+.footerMenu2 {
+  flex: 1 1 33%; /* Take up 100% width on small screens, shrink on larger screens */
+  margin-top: 2%;
+}
+
+.footerMenu ul,
+.footerMenu2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Center the content on small screens */
+}
+
+.footerMenu li a,
+.footerMenu2 li a {
+  display: block;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  transition: 1ms padding ease-in;
+}
+
+.footerMenu li a:hover,
+.footerMenu2 li a:hover {
+  background-color: rgba(255, 255, 255, 0.178);
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.footerMenu li h3,
+.footerMenu2 li h3,
+.footerMenu2 li h1 {
+  display: block;
+  color: #fff;
+  padding: 5px;
+  text-align: center; /* Center the content on small screens */
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px; /* Adjust the font size as needed */
+  transition: 1ms padding ease-in;
+}
+
+.footerMenu2 li h1 {
+  margin-top: 5%;
+  font-size: 35px !important;
+}
+
+.FootorBottom {
+  width: 100%;
+  padding: 20px 5%;
+  color: white;
+  text-align: center;
+}
+
+.FootorBottom hr {
+  color: white;
+}
+
+.Flex-Center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.flex_Grow {
+  flex-grow: 1;
+  width: 20%;
+  height: 73vh;
+}
+
+.flex-Outer {
+  padding: 0 50px;
+}
+
+#Form1 {
+  display: flex;
+}
+#Form2 {
+  display: none;
+}
+
+.Mobile-Card {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #00000050;
+  padding: 10px;
+  background-color: #fff;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.Sell-Card-Img {
+  max-width: 100%;
+
+  transition: transform 0.5s ease-in;
+}
+.Sell-Card-Img:hover {
+  transform: scale(1.5);
+}
+.half {
+  width: 50%;
+}
+.upset {
+  margin-top: -70px;
+  z-index: 1;
+}
+.inner_Div {
+  flex-grow: 1;
+  background-color: transparent;
+}
+.full-sive {
+  height: 20vh;
+  width: 33%;
+}
+
+.Sell_button {
+  all: unset;
+  width: 100%;
+  height: 7vh;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.Sell_button_Purple {
+  color: #6a5c81;
+  border: 2px solid #6a5c81;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  &:hover {
+    background-color: #6a5c81;
+    color: #fff;
+  }
+  &:focus {
+    background-color: #6a5c81;
+    color: #fff;
+  }
+  &:active {
+    background-color: #6a5c81;
+    color: #fff;
+  }
+}
+
+.Border {
+  border: 0.5px solid #000;
+}
+.leftDiv {
+  padding: 10px 10px 10px 10px;
+  width: 45%;
+  color: #6a5c81;
+}
+.leftDiv h3 {
+  font-weight: 600;
+  font-size: 40px;
+}
+.rightDiv {
+  /* padding: 0px 0px 0px 10px; */
+  width: 45%;
+}
+
+.tranlate_Img {
+  transform: translateY(-30px);
+}
+.Flex-reverse {
+  flex-direction: row-reverse;
+}
+label {
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+
+.Custom-Input {
+  all: unset;
+
+  font-family: "Roboto", sans-serif;
+  margin-top: 10px;
+  width: 100%;
+  border: 2px solid #5d5d5d;
+  border-radius: 5px;
+  height: 6vh;
+  font-size: 20px;
+  &:hover {
+    border: 2px solid #5d5d5d;
+    box-shadow: 0px 0px 10px #6a5c81;
+  }
+  &:focus {
+    border: 2px solid #5d5d5d;
+    box-shadow: 0px 0px 10px #6a5c81;
+  }
+  &:active {
+    border: 2px solid #5d5d5d;
+    box-shadow: 0px 0px 10px #6a5c81;
+  }
+}
+
+.Custom-textArea {
+  font-family: "Roboto", sans-serif;
+  margin-top: 10px;
+  width: 100%;
+  border: 2px solid #5d5d5d;
+  border-radius: 5px;
+  height: 6vh;
+  font-size: 20px;
+  &:hover {
+    border: 2px solid #5d5d5d;
+    box-shadow: 0px 0px 10px #6a5c81;
+  }
+  &:focus {
+    border: 2px solid #5d5d5d;
+    box-shadow: 0px 0px 10px #6a5c81;
+  }
+  &:active {
+    border: 2px solid #5d5d5d;
+    box-shadow: 0px 0px 10px #6a5c81;
+  }
+}
+
+.Youtube_Iframe_Main {
+  width: 75%;
+  margin: 20px 10px 20px 10px;
+}
+
+.Youtube_Iframe {
+  width: 25%;
+  margin: 20px 10px 20px 10px;
+}
+#showMore {
+  width: 15%;
+}
+#ContactNow {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .Flex-Center {
+    flex-direction: column; /* Change to a column layout on small screens */
+    width: 100vw;
+  }
+  .flex_Grow p {
+    margin-bottom: 10vh;
+  }
+  .flex_Grow {
+    flex-grow: 1;
+    width: 100%;
+    height: auto;
+  }
+  .flex-Outer {
+    padding: 0px 5px 0px 5px;
+  }
+  .leftDiv {
+    padding: 10px 10px 10px 10px;
+    width: 90%;
+    color: #6a5c81;
+  }
+  .rightDiv {
+    /* padding: 0px 0px 0px 10px; */
+    width: 100%;
+  }
+  .Flex-reverse {
+    flex-direction: column-reverse;
+  }
+  .Youtube_Iframe {
+    width: 90%;
+  }
+  .Youtube_Iframe_Main {
+    width: 90%;
+    padding: 10px 10px 10px 10px;
+  }
+  .navbar li:nth-child(1) {
+    float: left;
+    width: 90%;
+  }
+  .navbar li h3 {
+    text-align: center;
+  }
+  .navbar {
+    width: 100%;
+  }
+  /* Adjust styles for screens larger than 600px */
+  .footerMenu,
+  .footerMenu2 {
+    flex: 1 1 100%; /* Take up 30% width on larger screens */
+    margin-top: 0;
+  }
+  .footerMenu2 li h1 {
+    margin-top: 2%;
+    font-size: 35px !important;
+  }
+  .Image img {
+    width: 100%;
+    height: 50vh;
+  }
+  .ImgSlider {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  .Content {
+    padding-left: 30px;
+  }
+  #Up_Card {
+    display: none !important;
+  }
+  #showMore {
+    width: 35%;
+    height: 6vh;
+  }
+  .flex_Grow {
+    width: 100%;
+    height: auto;
+  }
+
+  .Mobile-Card {
+    width: 85%;
+    margin: 20px 0;
+  }
+  #ContactNow {
+    width: 50%;
+  }
+  #Form1 {
+    display: none;
+  }
+  #Form2 {
+    display: block;
+  }
+}
+
+.fade-in-bottom {
+  -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
